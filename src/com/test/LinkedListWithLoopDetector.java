@@ -27,8 +27,7 @@ public class LinkedListWithLoopDetector<T1> {
     public Node<T1> get(int nodePos) {
 
         Node<T1> temp = first;  // Move pointer to the initial position
-        int counter = 0;
-        for (; counter < nodePos; counter++) {
+        for (int counter = 0; counter < nodePos; counter++) {
             temp = temp.getNext();  // Move pointer one node ahead
         }
         return temp;
