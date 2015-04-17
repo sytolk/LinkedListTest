@@ -43,7 +43,7 @@ public class LinkedListWithLoopDetector<T1> {
             return false;
 
         Node<T1> temp = first;
-        Map<Node<T1>, Node<T1>> map = new IdentityHashMap<Node<T1>, Node<T1>>();
+        Map<Node<T1>, Node<T1>> map = new IdentityHashMap<Node<T1>, Node<T1>>(size);
         while (temp != null) {
             if (map.containsKey(temp)) {
                 System.out.println("duplicate Node detected having value :" + temp.getData());
